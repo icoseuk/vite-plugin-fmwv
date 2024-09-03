@@ -1,6 +1,6 @@
 # ⚡️ Vite &mdash; FileMaker Web Viewer
 
-A Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project. ⚠️ __Note:__ This plugin is intended for development purposes only. It will not work in a production environment.
+A Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project.
 
 ## Installation
 
@@ -48,7 +48,7 @@ You can then run the `vite` command as usual, and any trigger scripts or handler
 
 This optional parameter is useful for mocking FileMaker scripts that are triggered by FileMaker and use the `Perform JavaScript in Web Viewer` script step to run JavaScript code in the Web Viewer.
 
-An array of objects that will be available as mock scripts in the FileMaker Web Viewer environment. These functions should utilise globally available functions in the Web Viewer environment (`window.someCustomFunction()`).
+An array of objects that will be available as mock scripts in the FileMaker Web Viewer environment. These functions should utilise globally available functions in the application environment (`window.someCustomFunction()`), as the actual Web Viewer does.
 
 ### `handlerScripts`
 

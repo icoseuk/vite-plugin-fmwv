@@ -1,5 +1,5 @@
 import { Plugin } from "vite";
-import PluginOptions from "./src/types/options";
+import PluginOptions from "../types/options";
 
 /**
  * The Vite plugin for mocking a FileMaker Web Viewer environment.

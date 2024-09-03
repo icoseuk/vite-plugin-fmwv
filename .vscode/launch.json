@@ -1,8 +1,8 @@
 {
     "configurations": [
     {
-        "command": "npx vite --config ./tests/vite.config.ts  --host 0.0.0.0",
-        "name": "Preview in Chrome",
+        "command": "npm run dev",
+        "name": "Develop in Chrome",
         "request": "launch",
         "type": "node-terminal",
         "serverReadyAction": {

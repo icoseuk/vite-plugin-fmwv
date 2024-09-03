@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import filemakerWebViewerPlugin from '../vite-plugin-fmwv';
+import { filemakerWebViewerPlugin } from '../src/index';
 import { reportingScript } from './src/scripts/handlers';
 import { addExclamationMarkScript, addExclamationMarkScriptWithAlert } from './src/scripts/triggers';
 

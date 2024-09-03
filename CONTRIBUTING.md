@@ -8,7 +8,7 @@ This repository is configured to use a [Dev Container](https://containers.dev) f
 
 You can use GitHub Codespaces to contribute to this repository, this will open the repository in a containerized environment in the cloud. To use GitHub Codespaces, click on the button below:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/icoseuk/restmaker)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/icoseuk/vite-plugin-fmwv)
 
 ### Using local Dev Containers
 
@@ -25,7 +25,7 @@ You need to have the following software installed on your local machine to contr
 
 To get started quickly, you can simply click on the button below. This will open the repository in a containerized environment in Visual Studio Code:
 
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/icoseuk/restmaker)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/icoseuk/vite-plugin-fmwv)
 
 All this button does is open the repository in Visual Studio Code with the Dev Container configured. If you prefer to set up the Dev Container manually, follow the instructions below:
 
@@ -33,10 +33,10 @@ All this button does is open the repository in Visual Studio Code with the Dev C
 
 ```bash
 # Clone the repository
-git clone https://github.com/icoseuk/restmaker.git
+git clone https://github.com/icoseuk/vite-plugin-fmwv.git
 
 # Open the repository in Visual Studio Code
-code restmaker
+code vite-plugin-fmwv
 ```
 
 2. Open the repository in a Dev Container:

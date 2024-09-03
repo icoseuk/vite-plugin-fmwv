@@ -4,9 +4,12 @@
   "description": "This is a Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite --config ./tests/vite.config.ts  --host 0.0.0.0"
   },
-  "keywords": [],
+  "keywords": [
+    "vite-plugin",
+    "filemaker"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
