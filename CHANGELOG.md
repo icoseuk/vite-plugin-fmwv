@@ -1,7 +1,7 @@
 # Changelog
 
 
-## [1.0.1] - 2024-09-03
+## [1.1.0] - 2024-09-03
 
 This release includes important quality of life improvements and bug fixes.
 
