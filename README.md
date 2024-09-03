@@ -1,6 +1,6 @@
 # ⚡️ Vite &mdash; FileMaker Web Viewer
 
-This is a Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project. ⚠️ __Note:__ This plugin is intended for development purposes only. It will not work in a production environment.
+A Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project. ⚠️ __Note:__ This plugin is intended for development purposes only. It will not work in a production environment.
 
 ## Installation
 
@@ -71,5 +71,10 @@ __Note:__ The `option` parameter is optional and defaults to `0`. It is related 
 
 Check out the `tests` directory for a simple example of how to use this plugin.
 
+## Contributing
+
+Check out the [Contributing Guidelines](CONTRIBUTING.md) to get started on contributing to this repository.
+
 ## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
