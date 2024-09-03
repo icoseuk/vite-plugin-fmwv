@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-fmwv",
+  "name": "@icose/vite-plugin-fmwv",
   "version": "1.0.0",
   "description": "This is a Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project.",
   "type": "module",

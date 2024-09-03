@@ -5,7 +5,7 @@ A Vite plugin that allows you to mock the FileMaker Web Viewer environment in yo
 ## Installation
 
 ```bash
-npm install @icoseuk/vite-plugin-fmwv --save-dev
+npm install @icose/vite-plugin-fmwv --save-dev
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Add the plugin to your `vite.config.js`:
 
 import { defineConfig } from 'vite'
 
-import filemakerWebViewerPlugin from '@icoseuk/vite-plugin-fmwv'
+import filemakerWebViewerPlugin from '@icose/vite-plugin-fmwv'
 import { 
     mockFileMakerHandlerScript,
     mockFileMakerTriggerScript
