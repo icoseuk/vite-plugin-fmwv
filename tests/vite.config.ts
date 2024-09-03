@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
-import { filemakerWebViewerPlugin } from '../src/index';
+import { fileMakerWebViewerPlugin } from '../src/index';
 import { reportingScript } from './src/scripts/handlers';
 import { addExclamationMarkScript, addExclamationMarkScriptWithAlert } from './src/scripts/triggers';
 
 export default defineConfig({
     root: __dirname,
     plugins: [
-        filemakerWebViewerPlugin({
+        fileMakerWebViewerPlugin({
             triggerScripts: [
                 {
                     label: 'Add an exclamation mark',

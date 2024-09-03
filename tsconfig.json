@@ -11,6 +11,7 @@
     "paths": {                                   // Path mapping for module resolution
       "@/*": ["src/*"]
     },
+    "resolveJsonModule": true,                   // Include modules imported with .json extension
     "types": ["node"],                           // Type declaration files to be included in compilation
     "jsx": "preserve",                           // JSX code generation
     "lib": ["DOM", "DOM.Iterable", "ESNext"],    // Specify library files to be included in the compilation

@@ -1,5 +1,6 @@
 import { Plugin } from "vite";
 import PluginOptions from "../types/options";
+import information from "../../package.json";
 
 /**
  * The Vite plugin for mocking a FileMaker Web Viewer environment.
@@ -56,18 +57,38 @@ export default function filemakerWebViewerPlugin(options: PluginOptions = {}): P
                         });
                         window['${script.function.name}'] = ${script.function.toString()};
                     `).join('')}
+
+                    function __fmwv__toggleContainer() {
+                        let container = document.getElementById('fmwv--container');
+                        container.classList.toggle('closed');
+
+                        let button = document.querySelector('#fmwv--header button');
+                        button.innerText = container.classList.contains('closed') ? 'Open' : 'Close';
+                    }
                 </script>
-                <div id="mock-buttons">
-                <h2>Mock FileMaker Scripts:</h2>
-                    ${triggerScripts.map(script => `
-                        <button onclick="window.${script.function.name}()">${script.label}</button>
-                    `).join('')}
+                <div id="fmwv--container" class="${!triggerScripts.length ? 'hidden' : ''}">
+                    <div id="fmwv--header">
+                        <h2>FileMaker Scripts</h2>
+                        <button onclick="__fmwv__toggleContainer()">Close</button>
+                    </div>
+                    <div id="fmwv--trigger-scripts">
+                        ${triggerScripts.map(script => `
+                            <button onclick="window.${script.function.name}()">${script.label}</button>
+                        `).join('')}
+                    </div>
+                    <div id="fmwv--information">
+                        vite-plugin-fmwv v${information.version}
+                    </div>
                 </div>
             `;
 
             const styleInjection = `
                 <style>
-                    #mock-buttons {
+                    #fmwv--container.hidden {
+                        display: none;
+                    }
+
+                    #fmwv--container {
                         all: none;
                         position: fixed;
                         bottom: 0;
@@ -76,11 +97,33 @@ export default function filemakerWebViewerPlugin(options: PluginOptions = {}): P
                         background-color: #000;
                         color: #fff;
                         padding: 1rem;
-                        display: flex;
-                        justify-content: center;
+                        gap: 0.5rem;
+                        font-family: sans-serif !important;
+                        border-radius: 0.5rem 0.5rem 0 0;
                     }
-                    #mock-buttons button {
-                        margin: 0 0.5rem;
+
+                    #fmwv--container #fmwv--header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 0.5rem;
+                    }
+
+                    #fmwv--container #fmwv--trigger-scripts {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        align-items: center;
+                        }
+
+                    #fmwv--container #fmwv--information {
+                        width: 100%;
+                        text-align: right;
+                        opacity: 0.5;
+                        font-size: 0.75rem;
+                    }
+
+                    #fmwv--container button {
                         padding: 0.5rem 1rem;
                         background-color: #fff;
                         color: #000;
@@ -88,13 +131,18 @@ export default function filemakerWebViewerPlugin(options: PluginOptions = {}): P
                         border-radius: 0.25rem;
                         cursor: pointer;
                     }
-                    #mock-buttons button:hover {
-                        background-color: #000;
-                        color: #fff;
-                    }
-                    #mock-buttons h2 {
+
+                    #fmwv--container h2 {
                         font-size: 1rem;
-                        font-family: sans-serif !important;
+                    }
+
+                    #fmwv--container.closed {
+                        padding: 0 0.5rem;
+                    }
+
+                    #fmwv--container.closed  #fmwv--trigger-scripts,
+                    #fmwv--container.closed  #fmwv--information  {
+                        display: none;
                     }
                 </style>
             `;
