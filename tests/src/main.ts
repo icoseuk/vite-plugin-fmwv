@@ -1,0 +1,1 @@
+console.log("This is a test script for Vite using the FileMaker Web Viewer mock environment.");

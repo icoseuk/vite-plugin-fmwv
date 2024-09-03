@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite Test Project</title>
+</head>
+
+<body>
+    <div id="sample-text">Hello!</div>
+    <script>
+        /**
+         * Make a JavaScript function available to FileMaker.
+         */
+        window.addExclamationMarks = function (message) {
+            const el = document.getElementById('sample-text');
+            el.textContent = el.textContent + '!';
+            if (message) window.alert(message);
+        }
+
+        /**
+         * Call a FileMaker script from JavaScript.
+         */
+        function sendDataToFileMaker() {
+            FileMaker.PerformScript('Report on something', 'Hello from Vite!');
+        }
+
+        /**
+         * Call a FileMaker script from JavaScript.
+         */
+        function sendDataToFileMakerWithOption() {
+            FileMaker.PerformScriptWithOption('Report on something', 'Hello from Vite! Got the option?', '1');
+        }
+    </script>
+    <button onclick="sendDataToFileMaker()">Say hello to FileMaker</button>
+    <button onclick="sendDataToFileMakerWithOption()">Say hello to FileMaker (With Option)</button>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

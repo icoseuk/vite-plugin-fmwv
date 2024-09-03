@@ -1,0 +1,16 @@
+{
+  "name": "vite-plugin-fmwv",
+  "version": "1.0.0",
+  "description": "This is a Vite plugin that allows you to mock the FileMaker Web Viewer environment in your Vite project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.2",
+    "vite": "^5.4.2"
+  }
+}
